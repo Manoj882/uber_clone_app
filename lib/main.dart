@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rider_app/screens/authentication/login_screen.dart';
+import 'package:rider_app/screens/authentication/register_screen.dart';
 import 'package:rider_app/screens/main_screen.dart';
 
 void main() {
@@ -12,14 +14,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'Signatra',
-        
+      title: 'Taxi Rider App',
+      theme: ThemeData( 
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const MainScreen(),
+      debugShowCheckedModeBanner: false,
+      // home: RegisterScreen(),
+      initialRoute: LoginScreen.idScreen,
+      routes: {
+        RegisterScreen.idScreen: (context) => RegisterScreen(),
+        LoginScreen.idScreen: (context) => LoginScreen(),
+        MainScreen.idScreen: (context) => MainScreen(),
+
+      },
     );
   }
 }
