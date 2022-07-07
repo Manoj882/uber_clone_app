@@ -1,4 +1,4 @@
-package com.example.rider_app
+package com.manojbk.rider_app
 
 import io.flutter.embedding.android.FlutterActivity
 
